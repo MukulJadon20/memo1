@@ -1,8 +1,10 @@
+/* eslint-disable no-unused-vars */
 // /* eslint-disable no-unused-vars */
 // /* eslint-disable react/prop-types */
 import React from "react";
-import  {Link}  from "../styles/StyledComponent";
+import { Link } from "../styles/StyledComponent";
 import { Box, Stack, Typography } from "@mui/material";
+//import AvatarCard from "./AvatarCard";
 
 const ChatItem = ({
   avatar = [],
@@ -13,12 +15,15 @@ const ChatItem = ({
   isOnline,
   newMessageAlert,
   index = 0,
-  handleDeleteChatOpen,
+  handleDeleteChat,
 }) => {
   return (
     <Link
+      sx={{
+        padding: "0",
+      }}
       to={`/chat/${_id}`}
-      onContextMenu={(e) => handleDeleteChatOpen(e, _id, groupChat)}
+      onContextMenu={(e) => handleDeleteChat(e, _id, groupChat)}
     >
       <div
         style={{
@@ -31,7 +36,11 @@ const ChatItem = ({
           position: "relative",
         }}
       >
-        {/* Avatar card */}
+
+        {/* Avatar card  */}
+
+        {/* <AvatarCard avatar={avatar} /> */}
+
         <Stack>
           <Typography>{name}</Typography>
 
@@ -39,7 +48,6 @@ const ChatItem = ({
             <Typography>{newMessageAlert.count}New Message</Typography>
           )}
         </Stack>
-
 
         {isOnline && (
           <Box
