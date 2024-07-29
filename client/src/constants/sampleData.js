@@ -87,3 +87,39 @@ export const sampleNotification = [
     _id: "4",
   },
 ];
+
+
+export const SampleMessage=[
+  {
+    attachments:[
+      {
+        public_id:"itmwala",
+        url:"https://www.w3schools.com/howto/img_avatar.png",
+      },
+    ],
+    content:"Lunde ka message h",
+    _id:"btch wala",
+    sender:{
+      _id:"user._id",
+      name:"chamn",
+    },
+    chat:"chatId",
+    createdAt:"2024-02-12T10:41:30.630Z",
+  },
+  {
+    attachments:[
+      {
+        public_id:"itmwala 2",
+        url:"https://www.w3schools.com/howto/img_avatar.png",
+      },
+    ],
+    content:"Lunde 2 ka message h",
+    _id:"btch wala",
+    sender:{
+      _id:"gharwala",
+      name:"chamn2",
+    },
+    chat:"chatId",
+    createdAt:"2024-02-12T10:41:30.630Z",
+  }
+]

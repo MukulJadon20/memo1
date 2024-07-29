@@ -66,7 +66,7 @@ function Header() {
     <>
       <Box sx={{ flexGrow: 1 }} height={"4rem"}>
         <AppBar
-          position="static"
+          position="fixed"
           sx={{
             bgcolor: "#ae7070",
           }}

@@ -21,3 +21,13 @@ color:black;
 background-color:rgba(0,0,0,0.1);
 }
 `;
+
+export const InputBox= styled("input")`
+width:100vh;
+height:100vh;
+border:none;
+outlined:none;
+padding:0 3rem;
+border-radius:1.5rem;
+background-color:rgba(247,247,247,1);
+`
