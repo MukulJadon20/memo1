@@ -28,7 +28,7 @@ const Notification = () => {
         <DialogTitle>Notification</DialogTitle>
 
         {/* {sampleNotification.length > 0 ? (
-          sampleNotification,map(({sender,_id})=(
+          sampleNotification.map(({sender,_id})=(
             <Notification 
             sender={sender}
             _id={_id}

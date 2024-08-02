@@ -4,6 +4,7 @@
 import { Stack } from "@mui/material";
 import React from "react";
 import ChatItem from "../shared/ChatItem";
+import { bgGradient } from "../../constants/colors";
 //import ChatItem from "../shared/ChatItem";
 
 const ChatList = ({
@@ -20,8 +21,8 @@ const ChatList = ({
   handleDeleteChat,
 }) => {
   return (
-    <Stack width={w} direction={"column"}>
-      {chats?.map((data,index) => {
+    <Stack width={w} direction={"column"} overflow={"auto"} height={"100%"}>
+      {chats?.map((data, index) => {
         const { avatar, _id, name, groupChat, member } = data;
 
         const newMessageAlert = newMessagesAlert.find(
@@ -29,23 +30,23 @@ const ChatList = ({
         );
         const isOnline = member?.some((member) => onlineUsers.includes(_id));
 
-        return <ChatItem 
-        index={index}
-        newMessageAlert={newMessageAlert} 
-        isOnline={isOnline}
-        avatar={avatar}
-        name={name}
-        _id={_id}
-        key={_id}
-        groupChat={groupChat}
-        sameSender={chatId === _id}
-        handleDeleteChat={handleDeleteChat}
-        />;
-
+        return (
+          <ChatItem
+            index={index}
+            newMessageAlert={newMessageAlert}
+            isOnline={isOnline}
+            avatar={avatar}
+            name={name}
+            _id={_id}
+            key={_id}
+            groupChat={groupChat}
+            sameSender={chatId === _id}
+            handleDeleteChat={handleDeleteChat}
+          />
+        );
       })}
     </Stack>
   );
 };
 
 export default ChatList;
-

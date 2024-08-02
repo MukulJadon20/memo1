@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {
   Button,
   Dialog,
@@ -14,16 +15,16 @@ import { useInputValidation } from "6pp";
 const NewGroup = () => {
   const groupName = useInputValidation;
 
- // const [members, setMembers] = useState(sampleUsers);
+ //const [members, setMembers] = useState(sampleUsers);
   //const [selectedMembers, setSelectedMembers] = useState([]);
 //id
-  const selectMemberHandler = () => {
-    // setSelectedMembers((Prev) =>
-    //   Prev.include(id)
-    //     ? Prev.filter((currElement) => currElement !== id)
-    //     : [...Prev, id]
-    // );
-  };
+  // const selectMemberHandler = () => {
+  //   setSelectedMembers((Prev) =>
+  //     Prev.include(id)
+  //       ? Prev.filter((currElement) => currElement !== id)
+  //       : [...Prev, id]
+  //   );
+  // };
   // console.log(selectedMembers);
 
   const  closeHandler=()=>{};
@@ -45,7 +46,7 @@ const NewGroup = () => {
             <UserItem
               user={i}
               key={i._id}
-              handler={selectMemberHandler}
+             // handler={selectMemberHandler}
               //isAdded={selectedMembers.include(i._id)}
             />
           ))}
