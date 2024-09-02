@@ -1,5 +1,6 @@
 import {styled} from "@mui/material";
 import {Link as LinkComponent} from 'react-router-dom'
+// eslint-disable-next-line no-unused-vars
 import { grayColor } from "../../constants/colors";
 
 
@@ -43,10 +44,15 @@ background-color:#f1f1f1;
 font-size:1.1rem;`;
 
 
-export const curveButton =styled("button")`
+export const CurveButton =styled("button")`
 border-radius:1.5rem;
 padding:1rem 2rem;
 border:none;
 outline:none;
-curser
-`
+curser:pointer;
+background-color:  rgba(0,0,0,0.8) ;
+color:white;
+font-size:1.1rem;
+&:hover{
+background-color:  #f1f1f1}
+`;
